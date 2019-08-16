@@ -16,6 +16,8 @@
 		1EA1AF452306C1BB004D5AE8 /* toDo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EA1AF442306C1BB004D5AE8 /* toDo.json */; };
 		1EA1AF482306C516004D5AE8 /* task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1AF472306C516004D5AE8 /* task.swift */; };
 		1EA1AF4A2306C888004D5AE8 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1AF492306C888004D5AE8 /* DateFormatter.swift */; };
+		1EA1AF4E2306DFA1004D5AE8 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1AF4C2306DFA1004D5AE8 /* TaskCollectionViewCell.swift */; };
+		1EA1AF4F2306DFA1004D5AE8 /* TaskCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EA1AF4D2306DFA1004D5AE8 /* TaskCollectionViewCell.xib */; };
 		5CA48DB26DCC87F7B231E2FB /* Pods_toDoReqcyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B63D6C12D89D62DCDF0DFE4 /* Pods_toDoReqcyTests.framework */; };
 		A733C8D9FC2701004D9B6ABD /* Pods_toDoReqcy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BDF4C7A5DD59A56548AB16 /* Pods_toDoReqcy.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		1EA1AF442306C1BB004D5AE8 /* toDo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = toDo.json; sourceTree = "<group>"; };
 		1EA1AF472306C516004D5AE8 /* task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task.swift; sourceTree = "<group>"; };
 		1EA1AF492306C888004D5AE8 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		1EA1AF4C2306DFA1004D5AE8 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
+		1EA1AF4D2306DFA1004D5AE8 /* TaskCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCollectionViewCell.xib; sourceTree = "<group>"; };
 		2B63D6C12D89D62DCDF0DFE4 /* Pods_toDoReqcyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_toDoReqcyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F94D631D2CD6F1EAE41B02B /* Pods-toDoReqcy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toDoReqcy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-toDoReqcy/Pods-toDoReqcy.debug.xcconfig"; sourceTree = "<group>"; };
 		6C6229B85B7582D07B4A4603 /* Pods-toDoReqcyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toDoReqcyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-toDoReqcyTests/Pods-toDoReqcyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 		1EA1AF412306C121004D5AE8 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				1EA1AF4C2306DFA1004D5AE8 /* TaskCollectionViewCell.swift */,
+				1EA1AF4D2306DFA1004D5AE8 /* TaskCollectionViewCell.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -254,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EA1AF2C2306BF0D004D5AE8 /* LaunchScreen.storyboard in Resources */,
+				1EA1AF4F2306DFA1004D5AE8 /* TaskCollectionViewCell.xib in Resources */,
 				1EA1AF292306BF0D004D5AE8 /* Assets.xcassets in Resources */,
 				1EA1AF272306BF0C004D5AE8 /* Main.storyboard in Resources */,
 				1EA1AF452306C1BB004D5AE8 /* toDo.json in Resources */,
@@ -323,14 +330,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-toDoReqcy/Pods-toDoReqcy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +361,7 @@
 				1EA1AF4A2306C888004D5AE8 /* DateFormatter.swift in Sources */,
 				1EA1AF242306BF0C004D5AE8 /* ToDoViewController.swift in Sources */,
 				1EA1AF482306C516004D5AE8 /* task.swift in Sources */,
+				1EA1AF4E2306DFA1004D5AE8 /* TaskCollectionViewCell.swift in Sources */,
 				1EA1AF222306BF0C004D5AE8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
